@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/andrei/.config/nvim'
+let g:netrw_dirhist_3='/home/andrei/.config/nvim/lua/andrei'
+let g:netrw_dirhist_2='/home/andrei/.config/nvim/lua'
+let g:netrw_dirhist_1='/home/andrei/.config/nvim'
+let g:netrw_dirhist_0='/home/andrei/.config/nvim/lua/andrei'
+let g:netrw_dirhist_9='/home/andrei/vim_backup'
+let g:netrw_dirhist_8='/home/andrei/.config/nvim/lua/andrei'
+let g:netrw_dirhist_7='/home/andrei/.config/nvim/lua'
+let g:netrw_dirhist_6='/home/andrei/.config/nvim'
+let g:netrw_dirhist_5='/home/andrei/.config/nvim/after/plugin'
