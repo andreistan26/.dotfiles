@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
         tag = "v<CurrentMajor>.*", 
         run = "make install_jsregexp"
     })
-
+	use('github/copilot.vim')
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 end)
 
