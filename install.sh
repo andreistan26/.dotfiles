@@ -11,7 +11,7 @@ fi
 pushd $DOTFILES &> /dev/null
 
 for folder in "${STOW_FOLDERS[@]}"; do
-	stow -R "$folder"
+	stow --adopt -R "$folder"
 done
 
 popd &> /dev/null
