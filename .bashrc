@@ -121,21 +121,12 @@ fi
 PROMPT_DIRTRIM=1
 
 alias ls='ls --color'
-export EDITOR='vim'
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-#export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-#export PATH=/home/andrei/.rbenv/plugins/ruby-build/bin:/home/andrei/.rbenv/shims:/home/andrei/.rbenv/bin:/home/andrei/.rbenv/shims:/home/andrei/.rbenv/bin:/home/andrei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/postgresql/10/bin
-
-alias vreme='curl wttr.in/Bucharest'
-alias intla='echo "in apa malii"'
-#. "$HOME/.cargo/env"
-export XDG_CONFIG_HOME='/home/andrei/.config'
+export EDITOR='nvim'
+export XDG_CONFIG_HOME='/home/'$USER'/.config'
 export PATH=$PATH:/usr/local/go/bin
 bind 'set bell-style none'
 
-export GOPATH=/home/andrei/Documents/Repositories/Go
-export PATH=$PATH:/home/andrei/.local/bin:~/Documents/Scripts/bin:/var/lib/flatpak/exports/bin:$GOPATH/bin
+export PATH=$PATH:'/home/'$USER'/.local/bin:~/Documents/Scripts/bin:/var/lib/flatpak/exports/bin:$GOPATH/bin'
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -143,8 +134,6 @@ export PS1="\[\033[38;5;51m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\
 alias fzf-pdf='fzf --bind "enter:execute(open {} &)"'
 alias fzf-jmp='cd "$(dirname "$(fzf)")"'
 
-# Entry point for Depthai demo app, enables to run <depthai_launcher> in terminal
-export PATH=$PATH:/home/andrei/Luxonis/depthai/entrypoint
 export FZF_DEFAULT_COMMAND="fdfind . $HOME"
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT
