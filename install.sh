@@ -8,11 +8,6 @@ if [[ -z $DOTFILES ]]; then
     DOTFILES=$HOME/.dotfiles
 fi
 
-if [ -z $XDG_CONFIG_HOME ]; then
-	echo 'XDG_CONFIG_HOME must be set'
-	exit 1
-fi
-
 pushd $DOTFILES &> /dev/null
 
 for folder in "${STOW_FOLDERS[@]}"; do
