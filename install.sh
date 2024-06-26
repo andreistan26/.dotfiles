@@ -1,13 +1,22 @@
 #!/bin/bash
 
+if [[ -z $STOW_FOLDERS ]]; then
+	STOW_FOLDERS=("i3" "nvim" "root-files" "tmux")
+fi
+
+if [[ -z $DOTFILES ]]; then
+    DOTFILES=$HOME/.dotfiles
+fi
+
 if [ -z $XDG_CONFIG_HOME ]; then
 	echo 'XDG_CONFIG_HOME must be set'
 	exit 1
 fi
 
-cp .bashrc ~/.bashrc
-cp -r .tmux ~/.tmux
-cp .tmux.conf ~/.tmux.conf
+pushd $DOTFILES &> /dev/null
 
-cp -r nvim $XDG_CONFIG_HOME'/nvim'
-cp -r i3 $XDG_CONFIG_HOME'/i3'
+for folder in "${STOW_FOLDERS[@]}"; do
+	stow -R "$folder"
+done
+
+popd &> /dev/null
