@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
     use {'neoclide/coc.nvim', branch = 'release'}
     use 'dhruvasagar/vim-open-url'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use ({
@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
         tag = "v<CurrentMajor>.*", 
         run = "make install_jsregexp"
     })
-	use('github/copilot.vim')
+	use 'sindrets/diffview.nvim'
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 end)
 

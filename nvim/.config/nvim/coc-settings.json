@@ -12,7 +12,23 @@
           "snippetSupport": true
         }
       }
-    }
+    },
+	"ocaml": {
+      "command": "ocaml-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["ocaml", "reason"]
+    },
+	"svlangserver": {
+		"command": "svlangserver",
+		"filetypes": ["systemverilog"],
+		"settings": {
+			"systemverilog.includeIndexing": ["**/*.{v,sv,svh}"],
+			"systemverilog.excludeIndexing": ["test/**/*.{v,sv}*"],
+			"systemverilog.defines" : [],
+			"systemverilog.launchConfiguration": "/usr/bin/verilator -sv -Wall --lint-only",
+			"systemverilog.formatCommand": "/usr/local/bin/verible-verilog-format"
+		}
+	}
   }
 }
 

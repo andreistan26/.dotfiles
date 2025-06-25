@@ -185,11 +185,3 @@ bar {
         status_command i3status --config ~/.config/i3/i3status.conf
         font pango:DejaVu Sans Mono 5
 }
-for_window [class="Spotify"] move container to workspace $ws3
-
-exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/spotify'
-exec --no-startup-id i3-msg 'workspace 2; exec /snap/bin/firefox'
-exec --no-startup-id i3-msg 'workspace 3; exec /usr/local/bin/easyeffects'
-exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/gnome-terminal'
-
-for_window [class="easyeffects"] move container to workspace $ws3
